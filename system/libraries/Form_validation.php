@@ -37,6 +37,8 @@
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+if(!defined('INTL_IDNA_VARIANT_UTS46')) { define ('INTL_IDNA_VARIANT_UTS46', 1); }
+
 /**
  * Form Validation Class
  *
