@@ -25,7 +25,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 |
 */
 // $config['base_url'] = '';
-$config['base_url'] = 'http://'.$_SERVER['HTTP_HOST'];
+$config['base_url'] = $_SERVER['SERVER_PROTOCOL'].'://'.['HTTP_HOST'];
 $config['base_url'] .= preg_replace('@/+$@', '', dirname($_SERVER['SCRIPT_NAME'])).'/';
 /*
 |--------------------------------------------------------------------------
@@ -417,13 +417,10 @@ $config['cookie_httponly'] = false;
 | Determines whether to standardize newline characters in input data,
 | meaning to replace \r\n, \r, \n occurrences with the PHP_EOL value.
 |
-<<<<<<< HEAD
 | This is particularly useful for portability between UNIX-based OSes,
 | (usually \n) and Windows (\r\n).
-=======
 | WARNING: This feature is DEPRECATED and currently available only
 |          for backwards compatibility purposes!
->>>>>>> e76217041ddcae80f11b50b44a7d409b6722ad40
 |
 */
 $config['standardize_newlines'] = false;
