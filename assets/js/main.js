@@ -513,6 +513,7 @@ var Main = {
         return obj;
     },
     objectifyForm: function (formArray) {
+        console.log('objectifyForm invoked')
         var returnArray = {};
         for (var i = 0; i < formArray.length; i++) {
             returnArray[formArray[i]['name']] = formArray[i]['value'];
@@ -542,6 +543,9 @@ var Main = {
         })
     },
     autoSetError: function (attributes, value) {
+        console.log('autoSetError')
+        console.log('attributes=>', attributes)
+        console.log('value=>', value)
         $(attributes + ' input,' + attributes + ' textarea,' + attributes + ' select').each(function () {
             var form_group = $(this).parents(".form-group");
 

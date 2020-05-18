@@ -174,6 +174,7 @@ $(document).ready(function() {
     });
 
     $(document).on('click', form + ' .btn-save', function(e) {
+        console.log('button save di list.php invoked')
         e.preventDefault();
         var btn = $(this)
         var value = Main.objectifyForm($(form).serializeArray());
@@ -198,6 +199,7 @@ $(document).ready(function() {
                 $('#mytable').DataTable().ajax.reload(null, false);
             },
             error: function(e) {
+                console.log('errorr====>', e.responseJSON.error)
                 Main.autoSetError(form, e.responseJSON.error)
             },
             complete: function(e) {

@@ -121,6 +121,7 @@ $(document).ready(function() {
     var form = '#soalujianForm';
 
     function getDatabyId() {
+        console.log('getDatabyId di form.php invoked')
         var id = $(form + ' input[name="id"]').val();
         if (id) {
             $.ajax({
